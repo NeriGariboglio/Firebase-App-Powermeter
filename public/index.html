@@ -55,14 +55,6 @@
       <h1>Medidor de Energia  <i class="fas fa-tachometer-alt"></i></h1>
     </div>
 
-    <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
-    <div id="authentication-bar" style="display: none;">
-      <p><span id="authentication-status">Usuario registrado</span>
-        <span id="user-details">USEREMAIL</span>
-        <a href="/" id="logout-link">(cerrar sesión)</a>
-      </p>
-    </div>
-
     <!--LOGIN FORM-->
     <form id="login-form" style="display: none;">
       <div class="form-elements-container">
@@ -102,23 +94,38 @@
           </div>
           <!--POWER FACTOR-->
           <div class="card">
-            <p><i class="fas fa-lightbulb" style="color:#e8b211;"></i> FACTOR DE POTENCIA</p>
+            <p><i class="fa fa-industry" style="color:#e8b211;"></i> FACTOR DE POTENCIA</p>
             <p><span class="reading"><span id="pow"></span></span></p>
+          </div>
+          <!--POWER HOUR CURRENT-->
+          <div class="card">
+            <p><i class="fas fa-plug" style="color:#e2360f;"></i> ACUMULADO POR HORA</p>
+            <p><span class="reading"><span id="pfc"></span>Kw/Hs</span></p>
+          </div>
+          <!--POWER DAY CURRENT-->
+          <div class="card">
+            <p><i class="fas fa-plug"  style="color:#e2360f;"></i> ACUMULADO POR DIA</p>
+            <p><span class="reading"><span id="pdc"></span>Kw</span></p>
+          </div>
+          <!--POWER MONTH CURRENT-->
+          <div class="card">
+            <p><i class="fas fa-plug" style="color:#e2360f;"></i> ACUMULADO POR MES</p>
+            <p><span class="reading"><span id="pmc"></span>Kw</span></p>
           </div>
           <!--POWER HOUR-->
           <div class="card">
-            <p><i class="fas fa-plug" style="color:#e2360f;"></i> CONSUMO EN LA ULTIMA HORA</p>
+            <p><i class="fa fa-history"  style="color:#28e20f;"></i> CONSUMO EN LA ULTIMA HORA</p>
             <p><span class="reading"><span id="pf"></span>Kw/Hs</span></p>
           </div>
           <!--POWER DAY-->
           <div class="card">
-            <p><i class="fas fa-plug" style="color:#e2360f;"></i> CONSUMO EN EL ULTIMO DIA</p>
-            <p><span class="reading"><span id="pd"></span> Kw/Hs</span></p>
+            <p><i class="fa fa-history" style="color:#28e20f;"></i> CONSUMO EN EL ULTIMO DIA</p>
+            <p><span class="reading"><span id="pd"></span> Kw</span></p>
           </div>
           <!--POWER MONTH-->
           <div class="card">
-            <p><i class="fas fa-plug" style="color:#e2360f;"></i> CONSUMO EN EL ULTIMO MES</p>
-            <p><span class="reading"><span id="pm"></span> Kw/Hs</span></p>
+            <p><i class="fa fa-history" style="color:#28e20f;"></i> CONSUMO EN EL ULTIMO MES</p>
+            <p><span class="reading"><span id="pm"></span> Kw</span></p>
           </div>
         </div>
       </div>
@@ -203,7 +210,20 @@
     </div>
 
   </div>
-
+    <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
+    <div id="authentication-bar" style="display: none;">
+      <div class="a">
+        <div class=logout>
+          <button id="logout-link" href="/"><i class="fas fa-unlock-alt"></i>  Cerrar Sesión</button>
+        </div>
+        <div class="center">
+            <span id="authentication-status">Usuario registrado:</span>
+            <span id="user-details">USEREMAIL</span>
+        </div>
+        <div class="c">
+        </div>
+      </div>
+    </div>
     <!--INCLUDE JS FILES-->
     <script src="scripts/auth.js"></script>
     <script src="scripts/charts-definition.js"></script>
