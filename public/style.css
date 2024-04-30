@@ -30,8 +30,16 @@ body {
     width:20%;
     background-color:#c52c2c;
 }
-.c{
-    width:15%;
+.github{
+    width:20%;
+}
+.fa-github{
+    color: #193036;
+    font-size: 30px;
+}
+#proyect{
+    margin: 0%;
+    background-color: transparent;
 }
 #logout-link{
     border: none;
